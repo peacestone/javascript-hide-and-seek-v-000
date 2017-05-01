@@ -6,9 +6,9 @@ function nestedTarget() {
   return document.querySelector("#nested .target" )
 }
 function deepestChild() {
-  var child = document.querySelector('div#grand-node').querySelector("div")
+  var child = document.querySelector('div#grand-node div')
   while (true) {
-    if (child.querySelector('div')) {
+    if (child.children[0]) {
       child = child.children[0]
     }
     else {
